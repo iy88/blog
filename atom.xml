@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://iy88.github.io/blog/"/>
-  <updated>2020-03-05T12:46:06.897Z</updated>
+  <updated>2020-03-05T13:10:49.501Z</updated>
   <id>https://iy88.github.io/blog/</id>
   
   <author>
@@ -17,19 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>使用hexo</title>
-    <link href="https://iy88.github.io/blog/2020/03/05/%E4%BD%BF%E7%94%A8hexo/"/>
-    <id>https://iy88.github.io/blog/2020/03/05/%E4%BD%BF%E7%94%A8hexo/</id>
+    <title>hexo</title>
+    <link href="https://iy88.github.io/blog/2020/03/05/hexo/"/>
+    <id>https://iy88.github.io/blog/2020/03/05/hexo/</id>
     <published>2020-03-05T20:06:19.000Z</published>
-    <updated>2020-03-05T12:46:06.897Z</updated>
+    <updated>2020-03-05T13:10:49.501Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="使用hexo搭建博客"><a href="#使用hexo搭建博客" class="headerlink" title="使用hexo搭建博客"></a>使用hexo搭建博客</h2>]]></content>
+    <content type="html"><![CDATA[<h1 id="How-to-build-personal-blog-with-hexo"><a href="#How-to-build-personal-blog-with-hexo" class="headerlink" title="How to build personal blog with hexo"></a>How to build personal blog with hexo</h1><h4 id="1-create-the-github-account"><a href="#1-create-the-github-account" class="headerlink" title="1. create the github account"></a>1. create the github account</h4><h4 id="2-create-a-repository-named-username-github-io"><a href="#2-create-a-repository-named-username-github-io" class="headerlink" title="2. create a repository named username.github.io"></a>2. create a repository named <code>username</code>.github.io</h4><h4 id="3-git-clone-https-github-com-username-username-github-io"><a href="#3-git-clone-https-github-com-username-username-github-io" class="headerlink" title="3. git clone https://github.com/ username/username.github.io"></a>3. git clone <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a> <code>username</code>/<code>username</code>.github.io</h4><h4 id="4-npm-install-hexo-g"><a href="#4-npm-install-hexo-g" class="headerlink" title="4. npm install hexo -g"></a>4. npm install hexo -g</h4><h4 id="5-hexo-init-username-github-io"><a href="#5-hexo-init-username-github-io" class="headerlink" title="5. hexo init username.github.io"></a>5. hexo init <code>username</code>.github.io</h4><h4 id="6-hexo-g"><a href="#6-hexo-g" class="headerlink" title="6. hexo g"></a>6. hexo g</h4><h4 id="7-git-add"><a href="#7-git-add" class="headerlink" title="7. git add ./"></a>7. git add ./</h4><h4 id="8-git-commit-m-‘message’"><a href="#8-git-commit-m-‘message’" class="headerlink" title="8. git commit -m ‘message’"></a>8. git commit -m ‘message’</h4><h4 id="9-git-push"><a href="#9-git-push" class="headerlink" title="9. git push"></a>9. git push</h4><h4 id="10-visite-https-username-github-io"><a href="#10-visite-https-username-github-io" class="headerlink" title="10. visite https://username.github.io/"></a>10. visite https://<code>username</code>.github.io/</h4>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;使用hexo搭建博客&quot;&gt;&lt;a href=&quot;#使用hexo搭建博客&quot; class=&quot;headerlink&quot; title=&quot;使用hexo搭建博客&quot;&gt;&lt;/a&gt;使用hexo搭建博客&lt;/h2&gt;
+        &lt;h1 id=&quot;How-to-build-personal-blog-with-hexo&quot;&gt;&lt;a href=&quot;#How-to-build-personal-blog-with-hexo&quot; class=&quot;headerlink&quot; title=&quot;How to build persona
       
     
     </summary>
