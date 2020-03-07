@@ -8,7 +8,7 @@ subtitle: ''
 description: ''
 keywords: front-end | back-end
 author: iy88
-language: en
+language: zh-CN
 timezone: ''
 
 # URL
@@ -47,10 +47,10 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
-  tab_replace: ''
+  auto_detect: true
+  tab_replace: ' '
   wrap: true
-  hljs: false
+  hljs: true
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -108,3 +108,7 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
+
+
+
+
