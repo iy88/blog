@@ -3,12 +3,12 @@ title: hexo的基本使用方法
 date: 2020-03-05 20:06:19
 tags: hexo
 ---
-## 简介
-
 - hexo是一个高效的基于nodejs的博客框架
 - 拥有众多主题和插件
 - 支持markdown语法,不懂的自觉[`baidu`](https://www.baidu.com)|[`google`](https://www.google.com)|[`bing`](https://cn.bing.com)
 - 易上手
+- ...
+
 <!--more-->
 ## 快速上手
 ###### _本教程适用于windows系统用户,使用前请确保你有以下的环境_
@@ -17,13 +17,13 @@ tags: hexo
 - [Node](https://nodejs.org): ^8.10
 
 ### 1.按win+R在文本框中输入cmd,然后点击确认
->![](/blog/hexo/imgs/run.png)
+>![](/hexo/imgs/run.png)
 ### 2.cmd下输入以下内容,并回车
 ```shell
     npm install -g hexo-cli
 ```
 #### 等待安装hexo完成
->![](/blog/hexo/imgs/cmd.png)
+>![](/hexo/imgs/cmd.png)
 ### 3.cd进入桌面
 ```shell
     cd desktop
@@ -33,7 +33,7 @@ tags: hexo
     hexo init name
 ```
 #### `name`指你博客(注意:此处博客指博客系统的根目录,包括博客静态文件以及配置文件、主题等)存放的文件夹名称(如果不存在，则会自动创建)。创建完成后,打开这个文件夹你看到的会和下图中类似
->![](/blog/hexo/imgs/dir.png)
+>![](/hexo/imgs/dir.png)
 #### 文件说明
 - node_modules:
 ##### 存放node的模块(依赖)
@@ -62,9 +62,9 @@ tags: hexo
     hexo s
 ```
 #### 执行上述命令后,cmd会出现如下图类似的内容
->![](/blog/hexo/imgs/hexo-s.png)
+>![](/hexo/imgs/hexo-s.png)
 #### 这时，不要关cmd!在浏览器中访问[`http://localhost:4000/`](http://localhost:4000/)会出现如下内容
->![](/blog/hexo/imgs/webpage.png)
+>![](/hexo/imgs/webpage.png)
 ### 5.生成静态文件
 ```shell
     hexo g
