@@ -18,14 +18,16 @@ wget https://nodejs.org/dist/v12.16.1/node-v12.16.1-linux-x64.tar.gz
 ```shell
 tar -xvf node-v12.16.1-linux-x64.tar.gz
 ```
+##### `node-v12.16.1-linux-x64.tar.gz` 为压缩文件位置
 3.在profile(/etc/profile)中末尾加入
 ```
 export NODE_HOME=/root/node-v12.16.1-linux-x64
 export NODE_HOME
 export PATH=${PATH}:${NODE_HOME}/bin
 ```
+##### `/root/node-v12.16.1-linux-x64`为解压后文件位置
 #### 刷新配置
-```shell script
+```shell
 source /etc/profile
 ```
 4.安装pm2
@@ -36,3 +38,4 @@ npm install pm2
 ```shell
 ln -s /root/node-v12.16.1-linux-x64/bin/pm2 /usr/local/bin/
 ```
+##### `/root/node-v12.16.1-linux-x64`可以替换成你的安装路径
