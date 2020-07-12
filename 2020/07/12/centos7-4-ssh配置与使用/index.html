@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>centos7.4-ssh配置与使用 | iy88&#39;s</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ssh简介 Secure Shell（安全外壳协议，简称SSH）是一种加密的网络传输协议 可在不安全的网络中为网络服务提供安全的传输环境 SSH最常见的用途是远程登录系统，人们通常利用SSH来传输命令行界面和远程执行命令。 …">
+<meta property="og:type" content="article">
+<meta property="og:title" content="centos7.4-ssh配置与使用">
+<meta property="og:url" content="http://yoursite.com/2020/07/12/centos7-4-ssh%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="iy88&#39;s">
+<meta property="og:description" content="ssh简介 Secure Shell（安全外壳协议，简称SSH）是一种加密的网络传输协议 可在不安全的网络中为网络服务提供安全的传输环境 SSH最常见的用途是远程登录系统，人们通常利用SSH来传输命令行界面和远程执行命令。 …">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-07-12T19:25:23.000Z">
+<meta property="article:modified_time" content="2020-07-12T11:52:32.281Z">
+<meta property="article:author" content="iy88">
+<meta property="article:tag" content="env">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="iy88&#39;s" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">iy88&#39;s</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">主页</a>
+        
+          <a class="main-nav-link" href="/blog/archives">文章</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS源"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-centos7-4-ssh配置与使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2020/07/12/centos7-4-ssh%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2020-07-12T19:25:23.000Z" itemprop="datePublished">2020-07-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      centos7.4-ssh配置与使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="ssh简介"><a href="#ssh简介" class="headerlink" title="ssh简介"></a>ssh简介</h4><ul>
+<li>Secure Shell（安全外壳协议，简称SSH）是一种加密的网络传输协议</li>
+<li>可在不安全的网络中为网络服务提供安全的传输环境</li>
+<li>SSH最常见的用途是远程登录系统，人们通常利用SSH来传输命令行界面和远程执行命令。</li>
+<li>…<a id="more"></a>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum install ssh<br></code></pre></td></tr></table></figure>
+<h4 id="启停"><a href="#启停" class="headerlink" title="启停"></a>启停</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">service sshd start | stop | restart<br></code></pre></td></tr></table></figure>
+<h3 id="配置密钥对方式登录"><a href="#配置密钥对方式登录" class="headerlink" title="配置密钥对方式登录"></a>配置密钥对方式登录</h3></li>
+</ul>
+<ol>
+<li><h5 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ssh-keygen<br></code></pre></td></tr></table></figure>
+<h6 id="执行此命令会默认生成两个文件-id-rsa-私钥-id-rsa-pub-公钥-你可以选择使用命令参数改变"><a href="#执行此命令会默认生成两个文件-id-rsa-私钥-id-rsa-pub-公钥-你可以选择使用命令参数改变" class="headerlink" title="执行此命令会默认生成两个文件: id_rsa(私钥),id_rsa.pub(公钥),你可以选择使用命令参数改变"></a>执行此命令会默认生成两个文件: id_rsa(私钥),id_rsa.pub(公钥),你可以选择使用命令参数改变</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ssh-keygen -f [文件名]<br></code></pre></td></tr></table></figure>
+<h6 id="若没有指定会询问位置"><a href="#若没有指定会询问位置" class="headerlink" title="若没有指定会询问位置"></a>若没有指定会询问位置</h6><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">[root@desktop ~]# ssh-keygen<br>Generating public/private rsa key pair.<br>Enter file in which to save the key (/root/.ssh/id_rsa):输入文件保存位置/名称<br></code></pre></td></tr></table></figure></li>
+<li><h5 id="将公钥添加到-ssh-authorized-keys"><a href="#将公钥添加到-ssh-authorized-keys" class="headerlink" title="将公钥添加到~/.ssh/authorized_keys"></a>将公钥添加到~/.ssh/authorized_keys</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cat [公钥位置] &gt; ~/.ssh/anthorized_keys<br></code></pre></td></tr></table></figure></li>
+<li><h5 id="修改权限"><a href="#修改权限" class="headerlink" title="修改权限"></a>修改权限</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">[root@desktop ~]# chmod 700 ~<br>[root@desktop ~]# chmod 700 ~/.ssh<br>[root@desktop ~]# chmod 400 ~/.ssh/authorized_keys<br></code></pre></td></tr></table></figure></li>
+<li><h5 id="更改sshd配置"><a href="#更改sshd配置" class="headerlink" title="更改sshd配置"></a>更改sshd配置</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">vim /etc/ssh/sshd_config<br></code></pre></td></tr></table></figure>
+<h5 id="修改或添加以下部分"><a href="#修改或添加以下部分" class="headerlink" title="修改或添加以下部分"></a>修改或添加以下部分</h5><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">PubkeyAuthentication</span> <span class="hljs-literal">yes</span>  <span class="hljs-comment"># 启用基于密匙的安全验证</span><br><span class="hljs-string">PasswordAuthentication</span> <span class="hljs-literal">no</span>  <span class="hljs-comment"># 关闭基于口令的安全验证</span><br></code></pre></td></tr></table></figure>
+<h5 id="重启sshd"><a href="#重启sshd" class="headerlink" title="重启sshd"></a>重启sshd</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">service sshd restart<br></code></pre></td></tr></table></figure>
+<h6 id="若是新手或者不确定，请不要立刻关闭会话，再打开一个会话进行测试，防止连不上服务器"><a href="#若是新手或者不确定，请不要立刻关闭会话，再打开一个会话进行测试，防止连不上服务器" class="headerlink" title="若是新手或者不确定，请不要立刻关闭会话，再打开一个会话进行测试，防止连不上服务器"></a>若是新手或者不确定，请不要立刻关闭会话，再打开一个会话进行测试，防止连不上服务器</h6><h4 id="连接服务器-先将之前的id-rsa（私钥内容）复制到本地的-ssh-id-rsa"><a href="#连接服务器-先将之前的id-rsa（私钥内容）复制到本地的-ssh-id-rsa" class="headerlink" title="连接服务器(先将之前的id_rsa（私钥内容）复制到本地的.ssh/id_rsa)"></a>连接服务器(先将之前的id_rsa（私钥内容）复制到本地的.ssh/id_rsa)</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">ssh [用户名]@[ip/域名]<br></code></pre></td></tr></table></figure>
+<h6 id="enjoy-it"><a href="#enjoy-it" class="headerlink" title="enjoy it!"></a>enjoy it!</h6></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/12/centos7-4-ssh%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/" data-id="ckcj0qg7l00003qhr9r2a4u7b" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/env/" rel="tag">env</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2020/07/04/centos7-4%E4%B8%8Amysql%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">centos7.4上mysql服务端安装与使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/env/" rel="tag">env</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/env/" style="font-size: 20px;">env</a> <a href="/blog/tags/hexo/" style="font-size: 10px;">hexo</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">七月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/03/">三月 2020</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2020/07/12/centos7-4-ssh%E9%85%8D%E7%BD%AE%E4%B8%8E%E4%BD%BF%E7%94%A8/">centos7.4-ssh配置与使用</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/07/04/centos7-4%E4%B8%8Amysql%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">centos7.4上mysql服务端安装与使用</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/03/15/centos%E4%B8%8A%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%AE%89%E8%A3%85Node%E4%B8%8Epm2/">centos上命令行安装Node与pm2</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2020/03/05/hexo%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">hexo的基本使用方法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 iy88<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">主页</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">文章</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
