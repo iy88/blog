@@ -62,7 +62,7 @@ tags: hexo
     hexo s
 ```
 #### 执行上述命令后,cmd会出现如下图类似的内容
->![](/blog/hexo/imgs/blog/hexo-s.png)
+>![](/blog/hexo/imgs/hexo-s.png)
 #### 这时，不要关cmd!在浏览器中访问[`http://localhost:4000/`](http://localhost:4000/)会出现如下内容
 >![](/blog/hexo/imgs/webpage.png)
 ### 5.生成静态文件
