@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://github.iy88.site/blog/env/imgs/version.png">
 <meta property="og:image" content="https://github.iy88.site/blog/env/imgs/init.webp">
 <meta property="article:published_time" content="2020-07-04T00:43:51.000Z">
-<meta property="article:modified_time" content="2020-12-19T05:23:06.092Z">
+<meta property="article:modified_time" content="2021-02-24T08:28:52.395Z">
 <meta property="article:author" content="iy88">
 <meta property="article:tag" content="env">
 <meta name="twitter:card" content="summary">
@@ -35,7 +35,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 <body>
   <div id="container">
@@ -97,7 +97,7 @@
 <li>性能高、成本低、可靠性好</li>
 <li>较为流行</li>
 <li>适合中小型网站</li>
-<li>…<a id="more"></a>
+<li>…<span id="more"></span>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h5 id="目前MySQL-8已为稳定版，推荐安装，当然你也可以安装其他版本，下载链接"><a href="#目前MySQL-8已为稳定版，推荐安装，当然你也可以安装其他版本，下载链接" class="headerlink" title="目前MySQL 8已为稳定版，推荐安装，当然你也可以安装其他版本，下载链接"></a>目前MySQL 8已为稳定版，推荐安装，当然你也可以安装其他版本，<a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/">下载链接</a></h5><h5 id="在弹出页面中选择Linux-Generic如图所示"><a href="#在弹出页面中选择Linux-Generic如图所示" class="headerlink" title="在弹出页面中选择Linux - Generic如图所示"></a>在弹出页面中选择<code>Linux - Generic</code>如图所示</h5><img src="/blog/env/imgs/select.png" alt="选择操作系统"><h5 id="然后在页面下方选择适合的版本例如https-dev-mysql-com-get-Downloads-MySQL-8-0-mysql-8-0-20-linux-glibc2-12-x86-64-tar-xz如图所示"><a href="#然后在页面下方选择适合的版本例如https-dev-mysql-com-get-Downloads-MySQL-8-0-mysql-8-0-20-linux-glibc2-12-x86-64-tar-xz如图所示" class="headerlink" title="然后在页面下方选择适合的版本例如https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.20-linux-glibc2.12-x86_64.tar.xz如图所示"></a>然后在页面下方选择适合的版本例如<a target="_blank" rel="noopener" href="https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.20-linux-glibc2.12-x86_64.tar.xz">https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.20-linux-glibc2.12-x86_64.tar.xz</a>如图所示</h5><img src="/blog/env/imgs/version.png" alt="选择版本"><h5 id="然后下载所选版本-wget-O-URL"><a href="#然后下载所选版本-wget-O-URL" class="headerlink" title="然后下载所选版本 wget -O URL"></a>然后下载所选版本 wget -O <code>URL</code></h5><h5 id="然后根据官方的描述，下载所需依赖"><a href="#然后根据官方的描述，下载所需依赖" class="headerlink" title="然后根据官方的描述，下载所需依赖"></a>然后根据官方的描述，下载所需依赖</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum install numactl<br>yum install libaio-dev<br>yum install openssl<br></code></pre></td></tr></table></figure>
 <h5 id="解压安装包"><a href="#解压安装包" class="headerlink" title="解压安装包"></a>解压安装包</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">tar -xvf PATH<br></code></pre></td></tr></table></figure>
 <h5 id="PATH为下载的文件夹的路径"><a href="#PATH为下载的文件夹的路径" class="headerlink" title="PATH为下载的文件夹的路径"></a><em><code>PATH</code>为下载的文件夹的路径</em></h5><h5 id="移动解压后的文件夹到-usr-local-mysql或其他位置"><a href="#移动解压后的文件夹到-usr-local-mysql或其他位置" class="headerlink" title="移动解压后的文件夹到/usr/local/mysql或其他位置"></a>移动解压后的文件夹到/usr/local/mysql或其他位置</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mv mysql-8.0.20-linux-glibc2.12-x86_64 /usr/local/mysql<br></code></pre></td></tr></table></figure>
@@ -117,7 +117,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.iy88.site/blog/2020/07/04/centos7-4%E4%B8%8Amysql%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" data-id="ckiv99v5n0003zqok2l8ddybm" class="article-share-link">分享</a>
+      <a data-url="https://github.iy88.site/blog/2020/07/04/centos7-4%E4%B8%8Amysql%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" data-id="cklj6eug90003xwp3ahmv6xoj" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/env/" rel="tag">env</a></li></ul>
@@ -218,7 +218,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2020 iy88<br>
+      &copy; 2021 iy88<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
