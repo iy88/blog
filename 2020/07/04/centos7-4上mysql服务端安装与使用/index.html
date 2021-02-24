@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://github.iy88.site/blog/env/imgs/version.png">
 <meta property="og:image" content="https://github.iy88.site/blog/env/imgs/init.webp">
 <meta property="article:published_time" content="2020-07-04T00:43:51.000Z">
-<meta property="article:modified_time" content="2021-02-24T08:28:52.395Z">
+<meta property="article:modified_time" content="2021-02-24T08:30:14.612Z">
 <meta property="article:author" content="iy88">
 <meta property="article:tag" content="env">
 <meta name="twitter:card" content="summary">
@@ -112,12 +112,13 @@
 <h5 id="连接MySQL数据库"><a href="#连接MySQL数据库" class="headerlink" title="连接MySQL数据库"></a>连接MySQL数据库</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mysql -u root -p<br></code></pre></td></tr></table></figure>
 <h6 id="接着输入之前复制的密码并回车"><a href="#接着输入之前复制的密码并回车" class="headerlink" title="接着输入之前复制的密码并回车"></a>接着输入之前复制的密码并回车</h6><h4 id="更改密码及允许远程访问，在mysql客户端中输入"><a href="#更改密码及允许远程访问，在mysql客户端中输入" class="headerlink" title="更改密码及允许远程访问，在mysql客户端中输入:"></a>更改密码及允许远程访问，在mysql客户端中输入:</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;localhost&#x27;</span> <span class="hljs-keyword">IDENTIFIED</span> <span class="hljs-keyword">BY</span> <span class="hljs-string">`PASSWORD`</span> <span class="hljs-keyword">PASSWORD</span> <span class="hljs-keyword">EXPIRE</span> <span class="hljs-keyword">NEVER</span>;<br><span class="hljs-keyword">use</span> mysql;<br><span class="hljs-keyword">update</span> <span class="hljs-keyword">user</span> <span class="hljs-keyword">set</span> host=<span class="hljs-string">&#x27;%&#x27;</span> <span class="hljs-keyword">where</span> <span class="hljs-keyword">user</span> = <span class="hljs-string">&#x27;root&#x27;</span>;<br><span class="hljs-keyword">flush</span> <span class="hljs-keyword">privileges</span>;<br><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">USER</span> <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span> <span class="hljs-keyword">IDENTIFIED</span> <span class="hljs-keyword">WITH</span> mysql_native_password <span class="hljs-keyword">BY</span> <span class="hljs-string">`PASSWORD`</span>;<br><span class="hljs-keyword">flush</span> <span class="hljs-keyword">privileges</span>;<br></code></pre></td></tr></table></figure>
 <h6 id="PASSWORD-为新的密码"><a href="#PASSWORD-为新的密码" class="headerlink" title="_PASSWORD_为新的密码"></a>_<code>PASSWORD</code>_为新的密码</h6><h4 id="now-you-can-enjoy-it"><a href="#now-you-can-enjoy-it" class="headerlink" title="now you can enjoy it!"></a>now you can enjoy it!</h4><h5 id="MySQL-启停"><a href="#MySQL-启停" class="headerlink" title="MySQL`启停"></a>MySQL`启停</h5><pre><code class="shell">/etc/init.d/mysql.server start #启动
-/etc/init.d/mysql.server stop #停止</code></pre>
+/etc/init.d/mysql.server stop #停止
+</code></pre>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://github.iy88.site/blog/2020/07/04/centos7-4%E4%B8%8Amysql%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" data-id="cklj6eug90003xwp3ahmv6xoj" class="article-share-link">分享</a>
+      <a data-url="https://github.iy88.site/blog/2020/07/04/centos7-4%E4%B8%8Amysql%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" data-id="cklj6glc60003xin39rs137kp" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/env/" rel="tag">env</a></li></ul>
